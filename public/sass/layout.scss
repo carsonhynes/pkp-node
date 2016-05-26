@@ -1,0 +1,102 @@
+$piKappGold: #E7A614;
+$piKappBlue: #005596;
+$footerImageSize: 200px;
+$sm-page-break: 420px;
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+.navbar {
+    background-color: $piKappBlue;
+    a, p, strong {
+        color: white;
+    }
+}
+
+.navbar-collapse {
+    li {
+        a:hover, a:focus {
+            color: white;
+            background-color: $piKappGold;
+        }
+    }
+}
+
+.navbar-toggle {
+    span {
+        background-color: white;
+    }
+    background-color: darken($piKappBlue, 5%);
+}
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+    background-color: $piKappGold;
+}
+
+.footer {
+    background-color: black;
+    a, p, strong, h2 {
+        color: white;
+    }
+}
+
+.footer-image {
+    height: $footerImageSize;
+    width: $footerImageSize;
+    border-radius: $footerImageSize/2;
+    margin: 25px auto;
+}
+
+.footer-column {
+    * {
+        display: block;
+    }
+    strong {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 5px;
+    }
+    text-align: center;
+}
+
+.footer-paypal {
+    margin-top: 25px;
+    overflow: hidden;
+    input {
+        line-height: normal;
+    }
+    @media screen and (max-width: $sm-page-break) {
+        > div {
+            padding: 0;
+        }
+    }
+}
+
+#paypal {
+    height: 47px;
+    width: 150px;
+    max-width: 100%;
+    margin: 0 auto;
+    input[name="submit"] {
+        height: 47px;
+        width: 150px;
+        max-width: 100%;
+    }
+}
+
+.signature-container {
+    height: 50px;
+    position: relative;
+    p {
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+    }
+}

@@ -1,0 +1,41 @@
+$sm-page-break: 420px;
+
+.brother-picture{
+    max-width: 50%;
+    display: inline-block;
+    img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+}
+
+.brother-info {
+    width: 45%;
+    display: inline-block;
+    margin-left: 5%;
+    float: right;
+}
+
+.brother {
+    display: inline-block;
+    float: none;
+    margin-bottom: 25px;
+}
+
+.brother-name {
+    text-align: center;
+}
+
+.container-fluid {
+    text-align: center;
+}
+
+.class-year {
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: $sm-page-break) {
+    h3 {
+        margin-top: 0;
+    }
+}

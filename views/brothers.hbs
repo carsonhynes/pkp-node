@@ -1,0 +1,162 @@
+<h1>{{title}}</h1>
+<link href="css/brothers.css" rel="stylesheet">
+
+<div class="container-fluid">
+
+    {{#if supers}}
+        <h1 class="class-year">Super-Seniors</h1>
+    {{/if}}
+
+    {{#each supers}}
+        <div class="col-xs-12 col-md-3 brother">
+            <div class="brother-picture">
+                <img src="{{../img_src}}{{lowercase this.first_name}}_{{lowercase this.last_name}}.jpg"
+                     alt="{{this.first_name}} {{this.last_name}}">
+            </div>
+            <div class="brother-info">
+                <h3 class="brother-name">{{this.first_name}} {{this.last_name}}</h3>
+                <p><strong>Major: </strong>
+                    {{#each this.major}}
+                        {{this}}{{#unless @last}},{{/unless}}
+                    {{/each}}
+                </p>
+                <p><strong>Pledge Class: </strong>{{upperFirst this.pledge_season}} {{this.pledge_year}}</p>
+
+                <p><strong>
+                    {{#ifCond this.positions.length "==" 1}}Position:{{/ifCond}}
+                    {{#ifCond this.positions.length ">" 1}}Positions:{{/ifCond}}
+                </strong>
+                    {{#each this.positions}}
+                        {{position this}}{{#unless @last}},{{/unless}}
+                    {{/each}}
+                </p>
+            </div>
+        </div>
+    {{/each}}
+
+    {{#if seniors}}
+        <h1 class="class-year">Seniors</h1>
+    {{/if}}
+
+    {{#each seniors}}
+        <div class="col-xs-12 col-md-3 brother">
+            <div class="brother-picture">
+                <img src="{{../img_src}}{{lowercase this.first_name}}_{{lowercase this.last_name}}.jpg"
+                     alt="{{this.first_name}} {{this.last_name}}">
+            </div>
+            <div class="brother-info">
+                <h3 class="brother-name">{{this.first_name}} {{this.last_name}}</h3>
+                <p><strong>Major: </strong>
+                    {{#each this.major}}
+                        {{this}}{{#unless @last}},{{/unless}}
+                    {{/each}}
+                </p>
+                <p><strong>Pledge Class: </strong>{{upperFirst this.pledge_season}} {{this.pledge_year}}</p>
+
+                <p><strong>
+                    {{#ifCond this.positions.length "==" 1}}Position:{{/ifCond}}
+                    {{#ifCond this.positions.length ">" 1}}Positions:{{/ifCond}}
+                </strong>
+                    {{#each this.positions}}
+                        {{position this}}{{#unless @last}},{{/unless}}
+                    {{/each}}
+                </p>
+            </div>
+        </div>
+    {{/each}}
+
+    {{#if juniors}}
+        <h1 class="class-year">Juniors</h1>
+    {{/if}}
+
+    {{#each juniors}}
+        <div class="col-xs-12 col-md-3 brother">
+            <div class="brother-picture">
+                <img src="{{../img_src}}{{lowercase this.first_name}}_{{lowercase this.last_name}}.jpg"
+                     alt="{{this.first_name}} {{this.last_name}}">
+            </div>
+            <div class="brother-info">
+                <h3 class="brother-name">{{this.first_name}} {{this.last_name}}</h3>
+                <p><strong>Major: </strong>
+                    {{#each this.major}}
+                        {{this}}{{#unless @last}},{{/unless}}
+                    {{/each}}
+                </p>
+                <p><strong>Pledge Class: </strong>{{upperFirst this.pledge_season}} {{this.pledge_year}}</p>
+
+                <p><strong>
+                    {{#ifCond this.positions.length "==" 1}}Position:{{/ifCond}}
+                    {{#ifCond this.positions.length ">" 1}}Positions:{{/ifCond}}
+                </strong>
+                    {{#each this.positions}}
+                        {{position this}}{{#unless @last}},{{/unless}}
+                    {{/each}}
+                </p>
+            </div>
+        </div>
+    {{/each}}
+
+
+    {{#if sophomores}}
+        <h1 class="class-year">Sophomores</h1>
+    {{/if}}
+
+    {{#each sophomores}}
+        <div class="col-xs-12 col-md-3 brother">
+            <div class="brother-picture">
+                <img src="{{../img_src}}{{lowercase this.first_name}}_{{lowercase this.last_name}}.jpg"
+                     alt="{{this.first_name}} {{this.last_name}}">
+            </div>
+            <div class="brother-info">
+                <h3 class="brother-name">{{this.first_name}} {{this.last_name}}</h3>
+                <p><strong>Major: </strong>
+                    {{#each this.major}}
+                        {{this}}{{#unless @last}},{{/unless}}
+                    {{/each}}
+                </p>
+                <p><strong>Pledge Class: </strong>{{upperFirst this.pledge_season}} {{this.pledge_year}}</p>
+
+                <p><strong>
+                    {{#ifCond this.positions.length "==" 1}}Position:{{/ifCond}}
+                    {{#ifCond this.positions.length ">" 1}}Positions:{{/ifCond}}
+                </strong>
+                    {{#each this.positions}}
+                        {{position this}}{{#unless @last}},{{/unless}}
+                    {{/each}}
+                </p>
+            </div>
+        </div>
+    {{/each}}
+
+
+    {{#if freshman}}
+        <h1 class="class-year">Freshman</h1>
+    {{/if}}
+
+    {{#each freshman}}
+        <div class="col-xs-12 col-md-3 brother">
+            <div class="brother-picture">
+                <img src="{{../img_src}}{{lowercase this.first_name}}_{{lowercase this.last_name}}.jpg"
+                     alt="{{this.first_name}} {{this.last_name}}">
+            </div>
+            <div class="brother-info">
+                <h3 class="brother-name">{{this.first_name}} {{this.last_name}}</h3>
+                <p><strong>Major: </strong>
+                    {{#each this.major}}
+                        {{this}}{{#unless @last}},{{/unless}}
+                    {{/each}}
+                </p>
+                <p><strong>Pledge Class: </strong>{{upperFirst this.pledge_season}} {{this.pledge_year}}</p>
+
+                <p><strong>
+                    {{#ifCond this.positions.length "==" 1}}Position:{{/ifCond}}
+                    {{#ifCond this.positions.length ">" 1}}Positions:{{/ifCond}}
+                </strong>
+                    {{#each this.positions}}
+                        {{position this}}{{#unless @last}},{{/unless}}
+                    {{/each}}
+                </p>
+            </div>
+        </div>
+    {{/each}}
+</div>
