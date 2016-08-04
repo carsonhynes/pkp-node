@@ -25,7 +25,7 @@ router.get('/', function(req, res, next) {
     }
 
     if (db) {
-        db.collection('brothers').find({}).sort({last_name: 1}).toArray(function (err, results) {
+        db.collection('brothers').find({status: "brother"}).sort({last_name: 1}).toArray(function (err, results) {
             context.freshman = [];
             context.sophomores = [];
             context.juniors = [];

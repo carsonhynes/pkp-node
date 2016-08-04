@@ -52,16 +52,17 @@ gulp.task('nodemon', ['sass', 'compress'], function (cb) {
             'gulpfile.js',
             'node_modules/'
         ]
-    }).on('start', function () {
-        if (!started) {
-            started = true;
-            cb();
-        }
-    }).on('restart', function () {
-        setTimeout(function () {
-            browserSync.reload({stream: false});
-        }, 1000);
     });
+    //     .on('start', function () {
+    //     if (!started) {
+    //         started = true;
+    //         cb();
+    //     }
+    // }).on('restart', function () {
+    //     setTimeout(function () {
+    //         browserSync.reload({stream: false});
+    //     }, 1000);
+    // });
 });
 
-gulp.task('default', ['browser-sync']);
+gulp.task('default', ['nodemon']);
