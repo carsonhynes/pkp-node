@@ -5,7 +5,8 @@ var assert = require('assert');
 
 var context = {
     footer_img_src: "/images/footer/",
-    img_src: "/images/current-composites/"
+    img_src: "/images/current-composites/",
+    title: "Brothers"
 };
 
 router.get('/', function(req, res, next) {

@@ -29,18 +29,18 @@ gulp.task('compress', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('browser-sync', ['nodemon'], function() {
-
-    browserSync.init(null, {
-        proxy: "http://localhost:3000",
-        port: 3001,
-        files: ["public/**/*.*"]
-    });
-
-    gulp.watch("./public/sass/**/*.scss", ['sass']).on('change', browserSync.reload);
-    gulp.watch("./public/javascripts-tbc/*.js", ['compress']).on('change', browserSync.reload);
-    gulp.watch("views/*.hbs").on('change', browserSync.reload);
-});
+// gulp.task('browser-sync', ['nodemon'], function() {
+//
+//     browserSync.init(null, {
+//         proxy: "http://localhost:3000",
+//         port: 3001,
+//         files: ["public/**/*.*"]
+//     });
+//
+//     gulp.watch("./public/sass/**/*.scss", ['sass']).on('change', browserSync.reload);
+//     gulp.watch("./public/javascripts-tbc/*.js", ['compress']).on('change', browserSync.reload);
+//     gulp.watch("views/*.hbs").on('change', browserSync.reload);
+// });
 
 gulp.task('nodemon', ['sass', 'compress'], function (cb) {
 
