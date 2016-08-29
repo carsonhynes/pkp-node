@@ -82,3 +82,5 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+/blog_posts/.dropbox
+/blog_posts/desktop.ini

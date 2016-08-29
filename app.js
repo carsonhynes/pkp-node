@@ -6,13 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongodb = require('./custom_modules/db');
 var hbs_helpers = require('./custom_modules/hbs');
-// var ghost_startup = require('ghost/core/server/utils/startup-check').check();
-// var ghost = require('ghost/core');
-var errors = require('ghost/core/server/errors');
 
 var routes = require('./routes/index');
 var brothers = require('./routes/brothers');
 var contact = require('./routes/contact');
+var news = require('./routes/news');
 
 var app = express();
 
@@ -27,15 +25,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// ghost().then(function (ghostServer) {
-//     ghostServer.start();
-// }).catch(function (err) {
-//     errors.logErrorAndExit(err, err.context, err.help);
-// });
-
 app.use('/', routes);
 app.use('/brothers', brothers);
 app.use('/contact', contact);
+app.use('/news', news);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
